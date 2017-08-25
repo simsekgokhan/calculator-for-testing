@@ -30,7 +30,8 @@ struct Logger
 
 int main(int argc, char *argv[])
 {
-
+    int x
+	
     std::string cmd;
     std::cout << "Usage: 4+5, then hit Enter." << std::endl;
     std::cout << "Exit: '00 + Enter'" << std::endl;
