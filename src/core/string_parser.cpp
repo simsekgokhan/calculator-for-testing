@@ -1,13 +1,13 @@
 
 #include "string_parser.h"
 
-int StringParser::numberLeftOf(string const& str, string::const_iterator pos)
+int StringParser::numberLeftOf(std::string const& str, std::string::const_iterator pos)
 {
-    return stoi(string(str.cbegin(), pos));
+    return stoi(std::string(str.cbegin(), pos));
 }
 
-int StringParser::numberRightOf(string const& str, string::const_iterator pos)
+int StringParser::numberRightOf(std::string const& str, std::string::const_iterator pos)
 {
-    return stoi(string(pos + 1, str.cend()));
+    return stoi(std::string(pos + 1, str.cend()));
 }
 

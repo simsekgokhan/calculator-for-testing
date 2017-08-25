@@ -2,10 +2,8 @@
 
 #include<string>
 
-using namespace std;
-
 struct StringParser
 {
-    static int numberLeftOf(string const& str, string::const_iterator pos);
-    static int numberRightOf(string const& str, string::const_iterator pos);
+    static int numberLeftOf(std::string const& str, std::string::const_iterator pos);
+    static int numberRightOf(std::string const& str, std::string::const_iterator pos);
 };

@@ -4,8 +4,6 @@
 
 #include "core/string_parser.h"
 
-using namespace std;
-
 struct Adder
 {
     static int add(int left, int right) {
@@ -33,14 +31,14 @@ struct Logger
 int main(int argc, char *argv[])
 {
 
-    string cmd;
-    cout << "Usage: 4+5, then hit Enter." << endl;
-    cout << "Exit: '00 + Enter'" << endl;
-    cout << "----------------------------------------------\n" << endl;
-    cin >> cmd;
+    std::string cmd;
+    std::cout << "Usage: 4+5, then hit Enter." << std::endl;
+    std::cout << "Exit: '00 + Enter'" << std::endl;
+    std::cout << "----------------------------------------------\n" << std::endl;
+    std::cin >> cmd;
 
     do {       
-        auto pos = find_if(cbegin(cmd), cend(cmd),
+        auto pos = find_if(std::cbegin(cmd), std::cend(cmd),
                            [](char ch) {return ch < 48 || ch > 57; });
 
         char const ch = (pos != cmd.end()) ? *pos : '0';              
@@ -50,22 +48,22 @@ int main(int argc, char *argv[])
 
         if (ch == '+') {
             int result = Adder::add(l, r);
-            cout << '=' << result << endl;
+            std::cout << '=' << result << std::endl;
         }
         else if (ch == '/') {
             int result = Divider::divide(l,r);
-            cout << '=' << result << endl;
+            std::cout << '=' << result << std::endl;
         }
         else {
-            cout << "Error: Unsupported operation '" << ch << "'" << endl;
+            std::cout << "Error: Unsupported operation '" << ch << "'" << std::endl;
         }
 
-        cout << "\n---\n\n";
-        cin >> cmd;
+        std::cout << "\n---\n\n";
+        std::cin >> cmd;
     } while (cmd != "00");
    
 
-	cout << "...................." << endl;
-	cout << "The End \n\n";
+	std::cout << "...................." << std::endl;
+	std::cout << "The End \n\n";
 	return 0;
 }
