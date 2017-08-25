@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
+ # Get root directory of project
+PROJECT_DIR=$(dirname $SCRIPTS_DIR)
+            
+if [ ! -d  $PROJECT_DIR/build ]; then
+  mkdir -p $PROJECT_DIR/build;
+fi
+
+printf " \n--------------- Running Unit Tests ---------------\n\n"
+
+$PROJECT_DIR/bin/calculator_unit_tests
