@@ -33,3 +33,5 @@ script:
   - bash scripts/configure 
   - bash scripts/build
   - bash scripts/run-unit-tests 
+
+# end of file
