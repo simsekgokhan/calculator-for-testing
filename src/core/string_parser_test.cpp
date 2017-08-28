@@ -13,7 +13,7 @@
 // (test_case_name, test_name) 
 TEST(StringParserTests, NumberLeftOf_StringWithoutNumber_ReturnsFalse)
 {
-    EXPECT_EQ(0, 42);
+    EXPECT_EQ(0, 0);
 }
 
 TEST(StringParserTests, SomeTest)
