@@ -9,6 +9,7 @@ add_executable(calculator main.cpp ${SOURCES})
 add_subdirectory(googletest-release-1.8.1)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd") # To match with gtest 
 
 set(SOURCES_TEST
     core/string_parser_test.cpp
