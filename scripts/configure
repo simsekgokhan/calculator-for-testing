@@ -33,7 +33,24 @@ echo "---- 2) robo-shell"
 echo
 echo "-- a) clone ... "
 git clone https://github.com/paralect/robomongo-shell.git
+echo
+echo "-- ll"
+ls -l
+
+echo
+echo "-- robomongo-shell"
 cd robomongo-shell
+
+echo
+echo "-- pwd"
+pwd
+
+echo
+echo "-- ll"
+ls -l
+
+echo
+echo "-- git branch"
 git branch // make sure it is "roboshell-v4.0.4"
 
 # --------------------------- END ------------------------
