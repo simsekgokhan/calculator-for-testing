@@ -7,57 +7,64 @@ PROJECT_DIR=$(dirname $SCRIPTS_DIR)
 cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
-# echo
-# echo "---- 1) Openssl"
-# echo
-# echo "-- a) Download openssl"
-# wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
-# echo
-# echo "-- b) Unzip openssl"
-# tar -xzf openssl-1.0.2o.tar.gz
-# echo
-# echo "-- c) Config openssl"
-# cd openssl-1.0.2o
-# ./config shared
-# echo
-# echo "-- d) build openssl"
-# make
-# mkdir lib
-# cp libssl* libcrypto* lib/
-# echo
-# echo "-- ll lib"
-# ls -l lib
+#############################################################################
+echo
+echo "---- 1) Openssl"
+echo
+echo "-- a) Download openssl"
+wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
+echo
+echo "-- b) Unzip openssl"
+tar -xzf openssl-1.0.2o.tar.gz
+echo
+echo "-- c) Config openssl"
+cd openssl-1.0.2o
+./config shared
+echo
+echo "-- d) build openssl"
+make
+mkdir lib
+cp libssl* libcrypto* lib/
+echo
+echo "-- ll lib"
+ls -l lib
+echo
+echo "-- pwd openssl"
+pwd
+
+#############################################################################
 
 echo
 echo "---- 2) robo-shell"
+cd $PROJECT_DIR
 echo
-# echo "-- a) clone ... "
-# git clone https://github.com/paralect/robomongo-shell.git
-# echo
-# echo "-- ll"
-# ls -l
+echo "-- pwd"
+pwd
+echo
+echo "-- a) git clone ... "
+git clone https://github.com/paralect/robomongo-shell.git
+echo
+echo "-- ll"
+ls -l
 
-# echo
-# echo "-- robomongo-shell"
-# cd robomongo-shell
+echo
+echo "-- robomongo-shell"
+cd robomongo-shell
 
-# echo
-# echo "-- pwd"
-# pwd
+echo
+echo "-- pwd robo-shell"
+pwd
 
-# echo
-# echo "-- ll"
-# ls -l
-
-# echo
-# echo "-- git branch"
-# git branch // make sure it is "roboshell-v4.0.4"
+echo
+echo "-- ll"
+ls -l
 
 export ROBOMONGO_CMAKE_PREFIX_PATH="/home/travis;/home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell;/home/travis/build/gsimsekfb/calculator-for-testing/openssl"
 echo
-echo "-- $ROBOMONGO_CMAKE_PREFIX_PATH"
+echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
 echo $ROBOMONGO_CMAKE_PREFIX_PATH
 
+#############################################################################
 # --------------------------- END ------------------------
 echo
 # echo "-- ll aft"
