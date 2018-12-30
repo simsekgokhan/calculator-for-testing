@@ -7,34 +7,42 @@ PROJECT_DIR=$(dirname $SCRIPTS_DIR)
 cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
+# echo
+# echo "---- 1) Openssl"
+# echo
+# echo "-- a) Download openssl"
+# wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
+# echo
+# echo "-- b) Unzip openssl"
+# tar -xzf openssl-1.0.2o.tar.gz
+# echo
+# echo "-- c) Config openssl"
+# cd openssl-1.0.2o
+# ./config shared
+# echo
+# echo "-- d) build openssl"
+# make
+# mkdir lib
+# cp libssl* libcrypto* lib/
+# echo
+# echo "-- ll lib"
+# ls -l lib
+
 echo
-echo "---- 1) Openssl"
+echo "---- 2) robo-shell"
 echo
-echo "-- a) Download openssl"
-wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
-echo
-echo "-- b) Unzip openssl"
-tar -xvzf openssl-1.0.2o.tar.gz
-echo
-echo "-- c) Config openssl"
-cd openssl-1.0.2o
-./config shared
-echo
-echo "-- d) build openssl"
-make
-mkdir lib
-cp libssl* libcrypto* lib/
-echo
-echo "-- ll lib"
-ls -l lib
+echo "-- a) clone ... "
+git clone https://github.com/paralect/robomongo-shell.git
+cd robomongo-shell
+git branch // make sure it is "roboshell-v4.0.4"
 
 # --------------------------- END ------------------------
 echo
-echo "-- ll aft"
-pwd
-ls -l
+# echo "-- ll aft"
+# pwd
+# ls -l
 
 echo
-echo "-- DONE"
+echo "----- DONE ----"
 
 
