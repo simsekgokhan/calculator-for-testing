@@ -83,18 +83,24 @@ echo "-- dl scons"
 wget https://downloads.sourceforge.net/project/scons/scons/2.5.1/scons-2.5.1.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fscons%2Ffiles%2Fscons%2F2.5.1%2Fscons-2.5.1.tar.gz%2Fdownload&ts=1546198923
 
 echo
-echo "-- unzip scons"
-echo "-- cd scons*"
-tar -xzf scons*
-cd scons*
+echo "-- pwd"                  
+pwd
+echo "-- ls -l"                  
+ls -l
 
-echo
-echo "-- install scons"                  
-python setup.py install
+# echo
+# echo "-- unzip scons"
+# echo "-- cd scons*"
+# tar -xzf scons*
+# cd scons*
 
-echo
-echo "-- scons -v"                  
-scons -v
+# echo
+# echo "-- install scons"                  
+# python setup.py install
+
+# echo
+# echo "-- scons -v"                  
+# scons -v
                   
 # echo
 # echo "-- bin/build"
