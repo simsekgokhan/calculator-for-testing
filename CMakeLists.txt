@@ -7,8 +7,11 @@ option(BUILD_SHARED_LIBS "Build shared libraries (DLLs)." OFF)
 # Enable C++14 features 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # For Travis CI
  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MT")
+ #set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 
 # Set the output folder where your program will be created
 set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
