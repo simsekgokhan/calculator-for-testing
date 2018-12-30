@@ -1,7 +1,8 @@
 os:
   - linux
   - osx
-dist: trusty
+
+dist: xenial
 sudo: require
 language: cpp
 
