@@ -48,7 +48,7 @@ echo "-- ll"
 ls -l
 
 echo
-echo "-- robomongo-shell"
+echo "-- cd robomongo-shell"
 cd robomongo-shell
 
 echo
@@ -59,10 +59,20 @@ echo
 echo "-- ll"
 ls -l
 
-export ROBOMONGO_CMAKE_PREFIX_PATH="/home/travis;/home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell;/home/travis/build/gsimsekfb/calculator-for-testing/openssl"
+export ROBOMONGO_CMAKE_PREFIX_PATH="/home/travis;/home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell;/home/travis/build/gsimsekfb/calculator-for-testing/openssl-1.0.2o"
 echo
 echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
 echo $ROBOMONGO_CMAKE_PREFIX_PATH
+
+echo
+echo "-- chmod +x bin/*"
+echo "-- ll bin"
+chmod +x bin/*
+ls -l bin
+
+echo
+echo "-- bin/build"
+bin/build 
 
 #############################################################################
 # --------------------------- END ------------------------
