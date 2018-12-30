@@ -11,9 +11,10 @@
 */
 
 // (test_case_name, test_name) 
-TEST(StringParserTests, NumberLeftOf_StringWithoutNumber_ReturnsFalse)
+TEST(StringParserTests, compare_int)
 {
-    EXPECT_EQ(0, 0);
+    // EXPECT_TRUE(StringParser::compare_int(4,5)); // Fake failed test
+    EXPECT_TRUE(StringParser::compare_int(4,4));    // Fake passing test
 }
 
 TEST(StringParserTests, SomeTest)
