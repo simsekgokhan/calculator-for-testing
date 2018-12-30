@@ -7,58 +7,58 @@ PROJECT_DIR=$(dirname $SCRIPTS_DIR)
 cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
-# ############################################ 1. openssl #################################
-# echo
-# echo "---- 1) Openssl"
-# echo
-# echo "-- a) Download openssl"
-# wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
-# echo
-# echo "-- b) Unzip openssl"
-# tar -xzf openssl-1.0.2o.tar.gz
-# echo
-# echo "-- c) Config openssl"
-# cd openssl-1.0.2o
-# ./config shared
-# echo
-# echo "-- d) build openssl"
-# make
-# mkdir lib
-# cp libssl* libcrypto* lib/
-# echo
-# echo "-- ll lib"
-# ls -l lib
-# echo
-# echo "-- pwd openssl"
-# pwd
+############################################ 1. openssl #################################
+echo
+echo "---- 1) Openssl"
+echo
+echo "-- a) Download openssl"
+wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
+echo
+echo "-- b) Unzip openssl"
+tar -xzf openssl-1.0.2o.tar.gz
+echo
+echo "-- c) Config openssl"
+cd openssl-1.0.2o
+./config shared
+echo
+echo "-- d) build openssl"
+make
+mkdir lib
+cp libssl* libcrypto* lib/
+echo
+echo "-- ll lib"
+ls -l lib
+echo
+echo "-- pwd openssl"
+pwd
 
-# #################################### 2. robo-shell req #########################################
+#################################### 2. robo-shell req #########################################
 
-# echo
-# echo "---- 2) robo-shell req"
-# cd $PROJECT_DIR
-# echo
-# echo "-- dl scons"                  
-# wget https://ftp.osuosl.org/pub/blfs/conglomeration/scons/scons-2.5.1.tar.gz
-# echo
-# echo "-- pwd"                  
-# pwd
-# echo "-- ls -l"                  
-# ls -l
+echo
+echo "---- 2) robo-shell req"
+cd $PROJECT_DIR
+echo
+echo "-- dl scons"                  
+wget https://ftp.osuosl.org/pub/blfs/conglomeration/scons/scons-2.5.1.tar.gz
+echo
+echo "-- pwd"                  
+pwd
+echo "-- ls -l"                  
+ls -l
 
-# echo
-# echo "-- unzip scons"
-# echo "-- cd scons*"
-# tar -xzf scons*
-# cd scons*
+echo
+echo "-- unzip scons"
+echo "-- cd scons*"
+tar -xzf scons*
+cd scons*
 
-# echo
-# echo "-- install scons"                  
-# sudo python setup.py install > sclogs
+echo
+echo "-- install scons"                  
+sudo python setup.py install > sclogs
 
-# echo
-# echo "-- scons -v"                  
-# scons -v    
+echo
+echo "-- scons -v"                  
+scons -v    
 
 ###########################  3. robo-shell ##################################################
 
