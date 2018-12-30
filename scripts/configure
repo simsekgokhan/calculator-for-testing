@@ -7,7 +7,7 @@ PROJECT_DIR=$(dirname $SCRIPTS_DIR)
 cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
-#############################################################################
+############################################ 1. openssl #################################
 echo
 echo "---- 1) Openssl"
 echo
@@ -32,10 +32,38 @@ echo
 echo "-- pwd openssl"
 pwd
 
-#############################################################################
+#################################### 2. robo-shell req #########################################
 
 echo
-echo "---- 2) robo-shell"
+echo "---- 2) robo-shell req"
+cd $PROJECT_DIR
+echo
+echo "-- dl scons"                  
+wget https://ftp.osuosl.org/pub/blfs/conglomeration/scons/scons-2.5.1.tar.gz
+echo
+echo "-- pwd"                  
+pwd
+echo "-- ls -l"                  
+ls -l
+
+echo
+echo "-- unzip scons"
+echo "-- cd scons*"
+tar -xzf scons*
+cd scons*
+
+echo
+echo "-- install scons"                  
+sudo python setup.py install > sclogs
+
+echo
+echo "-- scons -v"                  
+scons -v    
+
+###########################  3. robo-shell ##################################################
+
+echo
+echo "---- 3) robo-shell"
 cd $PROJECT_DIR
 echo
 echo "-- pwd"
@@ -62,30 +90,7 @@ ls -l
 export ROBOMONGO_CMAKE_PREFIX_PATH="/home/travis;/home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell;/home/travis/build/gsimsekfb/calculator-for-testing/openssl-1.0.2o"
 echo
 echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
-echo $ROBOMONGO_CMAKE_PREFIX_PATH
- 
-echo
-echo "-- dl scons"                  
-wget https://ftp.osuosl.org/pub/blfs/conglomeration/scons/scons-2.5.1.tar.gz
-echo
-echo "-- pwd"                  
-pwd
-echo "-- ls -l"                  
-ls -l
-
-echo
-echo "-- unzip scons"
-echo "-- cd scons*"
-tar -xzf scons*
-cd scons*
-
-echo
-echo "-- install scons"                  
-sudo python setup.py install
-
-echo
-echo "-- scons -v"                  
-scons -v                                  
+echo $ROBOMONGO_CMAKE_PREFIX_PATH                              
 
 echo
 echo "-- chmod +x bin/*"
@@ -95,7 +100,8 @@ echo
 echo "-- bin/build"
 bin/build 
 
-#############################################################################
+################################ END #############################################
+
 # --------------------------- END ------------------------
 echo
 # echo "-- ll aft"
