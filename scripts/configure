@@ -80,7 +80,7 @@ cd $PROJECT_DIR
 
 echo
 echo "-- dl scons"                  
-wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
+wget https://ftp.osuosl.org/pub/blfs/conglomeration/scons/scons-2.5.1.tar.gz
 echo
 echo "-- pwd"                  
 pwd
