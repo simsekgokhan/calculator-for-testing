@@ -7,77 +7,63 @@ PROJECT_DIR=$(dirname $SCRIPTS_DIR)
 cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
-# #############################################################################
-# echo
-# echo "---- 1) Openssl"
-# echo
-# echo "-- a) Download openssl"
-# wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
-# echo
-# echo "-- b) Unzip openssl"
-# tar -xzf openssl-1.0.2o.tar.gz
-# echo
-# echo "-- c) Config openssl"
-# cd openssl-1.0.2o
-# ./config shared
-# echo
-# echo "-- d) build openssl"
-# make
-# mkdir lib
-# cp libssl* libcrypto* lib/
-# echo
-# echo "-- ll lib"
-# ls -l lib
-# echo
-# echo "-- pwd openssl"
-# pwd
+#############################################################################
+echo
+echo "---- 1) Openssl"
+echo
+echo "-- a) Download openssl"
+wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
+echo
+echo "-- b) Unzip openssl"
+tar -xzf openssl-1.0.2o.tar.gz
+echo
+echo "-- c) Config openssl"
+cd openssl-1.0.2o
+./config shared
+echo
+echo "-- d) build openssl"
+make
+mkdir lib
+cp libssl* libcrypto* lib/
+echo
+echo "-- ll lib"
+ls -l lib
+echo
+echo "-- pwd openssl"
+pwd
 
-# #############################################################################
+#############################################################################
 
-# echo
-# echo "---- 2) robo-shell"
-# cd $PROJECT_DIR
-# echo
-# echo "-- pwd"
-# pwd
-# echo
-# echo "-- a) git clone ... "
-# git clone https://github.com/paralect/robomongo-shell.git
-# echo
-# echo "-- ll"
-# ls -l
+echo
+echo "---- 2) robo-shell"
+cd $PROJECT_DIR
+echo
+echo "-- pwd"
+pwd
+echo
+echo "-- a) git clone ... "
+git clone https://github.com/paralect/robomongo-shell.git
+echo
+echo "-- ll"
+ls -l
 
-# echo
-# echo "-- cd robomongo-shell"
-# cd robomongo-shell
+echo
+echo "-- cd robomongo-shell"
+cd robomongo-shell
 
-# echo
-# echo "-- pwd robo-shell"
-# pwd
+echo
+echo "-- pwd robo-shell"
+pwd
 
-# echo
-# echo "-- ll"
-# ls -l
+echo
+echo "-- ll"
+ls -l
 
-# export ROBOMONGO_CMAKE_PREFIX_PATH="/home/travis;/home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell;/home/travis/build/gsimsekfb/calculator-for-testing/openssl-1.0.2o"
-# echo
-# echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
-# echo $ROBOMONGO_CMAKE_PREFIX_PATH
-
-# echo
-# echo "-- chmod +x bin/*"
-# echo "-- ll bin"
-# chmod +x bin/*
-# ls -l bin
-
-# echo
-# echo "-- apt update"
-# sudo apt-get -qq update
-
-# echo
-# echo "-- install scons"
-# sudo apt-get install -y scons            
-
+export ROBOMONGO_CMAKE_PREFIX_PATH="/home/travis;/home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell;/home/travis/build/gsimsekfb/calculator-for-testing/openssl-1.0.2o"
+echo
+echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
+echo $ROBOMONGO_CMAKE_PREFIX_PATH
+ 
 echo
 echo "-- dl scons"                  
 wget https://ftp.osuosl.org/pub/blfs/conglomeration/scons/scons-2.5.1.tar.gz
@@ -99,11 +85,15 @@ sudo python setup.py install
 
 echo
 echo "-- scons -v"                  
-scons -v
-                  
-# echo
-# echo "-- bin/build"
-# bin/build 
+scons -v                                  
+
+echo
+echo "-- chmod +x bin/*"
+chmod +x bin/*
+
+echo
+echo "-- bin/build"
+bin/build 
 
 #############################################################################
 # --------------------------- END ------------------------
