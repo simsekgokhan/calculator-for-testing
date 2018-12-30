@@ -1,14 +1,11 @@
 
 ## 1. --- Calculator
-
 set(SOURCES 
     core/string_parser.cpp
 )
 add_executable(calculator main.cpp ${SOURCES})
 
 ## 2. --- Calculator Unit Tests
-
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 add_subdirectory(googletest-release-1.8.1)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
