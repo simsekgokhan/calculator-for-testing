@@ -8,11 +8,15 @@ cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
 echo "-- ll"
-
 ls -l 
-echo "-- asdasd"
-# wget ftp://ftp.openssl.org/source/old/1.0.2/openssl-1.0.2.tar.gz
+
+echo "-- 1) Download openssl"
+wget ftp://ftp.openssl.org/source/old/1.0.2/openssl-1.0.2.tar.gz
 
 echo "-- ll"
+ls -l
+
+echo "-- df -h"
+df -h
 
 
