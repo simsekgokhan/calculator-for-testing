@@ -95,7 +95,7 @@ cd scons*
 
 echo
 echo "-- install scons"                  
-python setup.py install
+sudo python setup.py install
 
 echo
 echo "-- scons -v"                  
