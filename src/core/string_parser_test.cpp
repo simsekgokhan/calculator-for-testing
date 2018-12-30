@@ -1,5 +1,6 @@
 
 #include "gtest/gtest.h"
+#include "string_parser.h"
 
 /* Example Test:
  *
