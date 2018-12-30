@@ -8,19 +8,23 @@ cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
 echo
-echo "-- ll bef"
-ls -l 
-
+echo "---- 1) Openssl"
 echo
-echo "-- 1) Download openssl"
+echo "-- a) Download openssl"
 wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
+echo
+echo "-- b) Unzip openssl"
+tar -xvzf openssl-1.0.2o.tar.gz
+echo
+echo "-- c) Config openssl"
+cd openssl-1.0.2o
+./config shared
 
 echo
 echo "-- ll aft"
 ls -l
 
 echo
-echo "-- df -h"
-df -h
+echo "-- DONE"
 
 
