@@ -87,19 +87,19 @@ pwd
 echo "-- ls -l"                  
 ls -l
 
-# echo
-# echo "-- unzip scons"
-# echo "-- cd scons*"
-# tar -xzf scons*
-# cd scons*
+echo
+echo "-- unzip scons"
+echo "-- cd scons*"
+tar -xzf scons*
+cd scons*
 
-# echo
-# echo "-- install scons"                  
-# python setup.py install
+echo
+echo "-- install scons"                  
+python setup.py install
 
-# echo
-# echo "-- scons -v"                  
-# scons -v
+echo
+echo "-- scons -v"                  
+scons -v
                   
 # echo
 # echo "-- bin/build"
