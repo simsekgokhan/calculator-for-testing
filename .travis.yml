@@ -1,7 +1,5 @@
 os:
-  - linux
-dist: trusty
-sudo: require
+  - windows
 language: cpp
 
 script:
