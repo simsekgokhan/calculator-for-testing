@@ -10,4 +10,8 @@ fi
 
 printf " \n--------------- Running Unit Tests ---------------\n\n"
 
-$PROJECT_DIR/bin/calculator_unit_tests
+if [ "$TRAVIS_OS_NAME" = "windows"  ]; then 
+  $PROJECT_DIR/bin/Debug/calculator_unit_tests
+else
+  $PROJECT_DIR/bin/calculator_unit_tests
+fi
