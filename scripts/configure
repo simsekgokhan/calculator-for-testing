@@ -7,84 +7,98 @@ PROJECT_DIR=$(dirname $SCRIPTS_DIR)
 cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
-#############################################################################
-echo
-echo "---- 1) Openssl"
-echo
-echo "-- a) Download openssl"
-wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
-echo
-echo "-- b) Unzip openssl"
-tar -xzf openssl-1.0.2o.tar.gz
-echo
-echo "-- c) Config openssl"
-cd openssl-1.0.2o
-./config shared
-echo
-echo "-- d) build openssl"
-make
-mkdir lib
-cp libssl* libcrypto* lib/
-echo
-echo "-- ll lib"
-ls -l lib
-echo
-echo "-- pwd openssl"
-pwd
+# #############################################################################
+# echo
+# echo "---- 1) Openssl"
+# echo
+# echo "-- a) Download openssl"
+# wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
+# echo
+# echo "-- b) Unzip openssl"
+# tar -xzf openssl-1.0.2o.tar.gz
+# echo
+# echo "-- c) Config openssl"
+# cd openssl-1.0.2o
+# ./config shared
+# echo
+# echo "-- d) build openssl"
+# make
+# mkdir lib
+# cp libssl* libcrypto* lib/
+# echo
+# echo "-- ll lib"
+# ls -l lib
+# echo
+# echo "-- pwd openssl"
+# pwd
 
-#############################################################################
+# #############################################################################
+
+# echo
+# echo "---- 2) robo-shell"
+# cd $PROJECT_DIR
+# echo
+# echo "-- pwd"
+# pwd
+# echo
+# echo "-- a) git clone ... "
+# git clone https://github.com/paralect/robomongo-shell.git
+# echo
+# echo "-- ll"
+# ls -l
+
+# echo
+# echo "-- cd robomongo-shell"
+# cd robomongo-shell
+
+# echo
+# echo "-- pwd robo-shell"
+# pwd
+
+# echo
+# echo "-- ll"
+# ls -l
+
+# export ROBOMONGO_CMAKE_PREFIX_PATH="/home/travis;/home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell;/home/travis/build/gsimsekfb/calculator-for-testing/openssl-1.0.2o"
+# echo
+# echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
+# echo $ROBOMONGO_CMAKE_PREFIX_PATH
+
+# echo
+# echo "-- chmod +x bin/*"
+# echo "-- ll bin"
+# chmod +x bin/*
+# ls -l bin
+
+# echo
+# echo "-- apt update"
+# sudo apt-get -qq update
+
+# echo
+# echo "-- install scons"
+# sudo apt-get install -y scons            
 
 echo
-echo "---- 2) robo-shell"
-cd $PROJECT_DIR
-echo
-echo "-- pwd"
-pwd
-echo
-echo "-- a) git clone ... "
-git clone https://github.com/paralect/robomongo-shell.git
-echo
-echo "-- ll"
-ls -l
+echo "-- dl scons"                  
+wget https://downloads.sourceforge.net/project/scons/scons/2.5.1/scons-2.5.1.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fscons%2Ffiles%2Fscons%2F2.5.1%2Fscons-2.5.1.tar.gz%2Fdownload&ts=1546198923
 
 echo
-echo "-- cd robomongo-shell"
-cd robomongo-shell
+echo "-- unzip scons"
+echo "-- cd scons*"
+tar -xzf scons*
+cd scons*
 
 echo
-echo "-- pwd robo-shell"
-pwd
-
-echo
-echo "-- ll"
-ls -l
-
-export ROBOMONGO_CMAKE_PREFIX_PATH="/home/travis;/home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell;/home/travis/build/gsimsekfb/calculator-for-testing/openssl-1.0.2o"
-echo
-echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
-echo $ROBOMONGO_CMAKE_PREFIX_PATH
-
-echo
-echo "-- chmod +x bin/*"
-echo "-- ll bin"
-chmod +x bin/*
-ls -l bin
-
-echo
-echo "-- apt update"
-sudo apt-get -qq update
-
-echo
-echo "-- install scons"
-sudo apt-get install -y scons            
+echo "-- install scons"                  
+python setup.py install
 
 echo
 echo "-- scons -v"                  
 scons -v
                   
-echo
-echo "-- bin/build"
-bin/build 
+# echo
+# echo "-- bin/build"
+# bin/build 
 
 #############################################################################
 # --------------------------- END ------------------------
