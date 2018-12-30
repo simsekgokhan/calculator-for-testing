@@ -7,15 +7,19 @@ PROJECT_DIR=$(dirname $SCRIPTS_DIR)
 cd $PROJECT_DIR
 # cmake -H. -Bbuild
 
-echo "-- ll"
+echo
+echo "-- ll bef"
 ls -l 
 
+echo
 echo "-- 1) Download openssl"
-wget ftp://ftp.openssl.org/source/old/1.0.2/openssl-1.0.2.tar.gz
+wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2o.tar.gz
 
-echo "-- ll"
+echo
+echo "-- ll aft"
 ls -l
 
+echo
 echo "-- df -h"
 df -h
 
