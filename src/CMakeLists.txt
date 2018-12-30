@@ -9,7 +9,7 @@ add_executable(calculator main.cpp ${SOURCES})
 
 # --- Calculator Unit Tests
 
-add_subdirectory(gtest-1.8.0)
+add_subdirectory(googletest-release-1.8.1)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
