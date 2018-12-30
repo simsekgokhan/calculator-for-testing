@@ -71,6 +71,14 @@ chmod +x bin/*
 ls -l bin
 
 echo
+echo "-- install scons"
+sudo apt-get install -y scons            
+
+echo
+echo "-- scons -v"                  
+scons -v
+                  
+echo
 echo "-- bin/build"
 bin/build 
 
