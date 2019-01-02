@@ -16,9 +16,10 @@ script:
 deploy:
   provider: releases
   api_key: "df91e078d1a9c32cf11ba754a3886642d6b34cd9"
-  file: "bin/calculator-for-testing"
+  file: "bin/calculator"
   skip_cleanup: true
-  on:
-    tags: true
+## Deploy only if the build is a tagged build
+#   on:
+#     tags: true
     
 # end of file
