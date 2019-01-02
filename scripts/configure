@@ -146,6 +146,10 @@ echo "apt-get update"
 apt-get update
 
 echo
+echo "sudo apt-get install libgl-dev"
+sudo apt-get install libgl-dev
+
+echo
 echo "-- sudo apt install mesa-common-dev"
 sudo apt install mesa-common-dev
 
