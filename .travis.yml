@@ -13,8 +13,8 @@ script:
   - bash scripts/build
   - bash scripts/run-unit-tests 
 
-before_deploy:
-   git tag `git rev-parse --short HEAD`
+# before_deploy:
+#    git tag `git rev-parse --short HEAD`
 
 deploy:
   provider: releases
@@ -25,7 +25,7 @@ deploy:
   overwrite: true
   # draft: true
   ## Deploy only if the build is a tagged build
-  # on:
-  #    tags: true
+  on:
+     tags: true
     
 # end of file
