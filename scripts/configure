@@ -114,12 +114,12 @@ echo
 echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
 echo $ROBOMONGO_CMAKE_PREFIX_PATH      
 
-# echo
-# echo "-- a) git clone Qt_for_CI... "
-# git clone https://github.com/simsekgokhan/Qt_for_CI.git
-# echo
-# echo "-- mv Qt_for_CI/* ."
-# mv Qt_for_CI/*.gz .
+echo
+echo "-- a) git clone Qt_for_CI... "
+git clone https://github.com/simsekgokhan/Qt_for_CI.git
+echo
+echo "-- mv Qt_for_CI/* ."
+mv Qt_for_CI/*.gz .
 
 # echo 
 # echo "mkdir -p Qt5.9.3/5.9.3/"
