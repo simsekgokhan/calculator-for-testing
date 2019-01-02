@@ -73,13 +73,7 @@ echo
 echo "-- tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/"
 tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/
 
-# echo 
-# echo "mkdir -p robomongo-shell/build"
-# mkdir -p robomongo-shell/build
-
-# echo
-# echo "-- tar -xzf opt.tar.gz -C robomongo-shell/build"
-# tar -xzf opt.tar.gz -C robomongo-shell/build
+// ...
 
 echo
 echo "-- tar -xzf openssl-1.0.2o_built_linux.tar.gz"
@@ -104,9 +98,6 @@ pwd
 echo
 echo "-- a) git clone robo-shell... "
 git clone https://github.com/paralect/robomongo-shell.git
-echo
-echo "-- ll"
-ls -l
 
 echo
 echo "-- cd robomongo-shell"
@@ -114,26 +105,30 @@ cd robomongo-shell
 echo "-- pwd"
 pwd
 
-echo
-echo "-- ll"
-ls -l
-
 export ROBOMONGO_CMAKE_PREFIX_PATH="$PROJECT_DIR/Qt5.9.3/5.9.3/gcc_64/;$PROJECT_DIR/robomongo-shell;$PROJECT_DIR/openssl-1.0.2o"
 echo
 echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
 echo $ROBOMONGO_CMAKE_PREFIX_PATH                           
 
-echo
-echo "-- pip install"
-pip install --user -r etc/pip/dev-requirements.txt
+echo 
+echo "mkdir build"
+mkdir build
 
 echo
-echo "-- chmod +x bin/*"
-chmod +x bin/*
+echo "-- tar -xzf opt.tar.gz -C build"
+tar -xzf opt.tar.gz -C build
 
-echo
-echo "-- bin/build"
-bin/build 
+# echo
+# echo "-- pip install"
+# pip install --user -r etc/pip/dev-requirements.txt
+
+# echo
+# echo "-- chmod +x bin/*"
+# chmod +x bin/*
+
+# echo
+# echo "-- bin/build"
+# bin/build 
 
 ###########################  4. robo ##################################################
 # https://github.com/simsekgokhan/Qt_for_CI
