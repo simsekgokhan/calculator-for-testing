@@ -162,9 +162,8 @@ echo "-- bin/configure"
 bin/configure 
 
 echo 
-echo "ls -l /home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell"
-ls -l /home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell
-
+echo "-- bin/build"
+bin/build 
 
 ################################ END #############################################
 
