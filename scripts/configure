@@ -121,21 +121,13 @@ echo
 echo "-- mv Qt_for_CI/* ."
 mv Qt_for_CI/*.gz .
 
-# echo 
-# echo "mkdir -p Qt5.9.3/5.9.3/"
-# mkdir -p Qt5.9.3/5.9.3/
+echo 
+echo "mkdir -p Qt5.9.3/5.9.3/"
+mkdir -p Qt5.9.3/5.9.3/
 
-# echo
-# echo "-- tar -xzf qt_5.9.3_gcc_64.tar.gz "
-# tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/
-
-# echo 
-# echo "ll"
-# ls -l
-
-# echo 
-# echo "ll Qt5.9.3/5.9.3/gcc_64"
-# ls -l Qt5.9.3/5.9.3/gcc_64
+echo
+echo "-- tar -xzf qt_5.9.3_gcc_64.tar.gz "
+tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/
 
 echo 
 echo "mkdir robomongo-shell"
@@ -145,29 +137,21 @@ echo
 echo "-- tar -xzf opt.tar.gz -C robomongo-shell"
 tar -xzf opt.tar.gz -C robomongo-shell
 
-echo 
-echo "ll robomongo-shell/opt"
-ls -l robomongo-shell/opt
-
 echo
 echo "-- tar -xzf openssl-1.0.2o_built_linux.tar.gz"
 tar -xzf openssl-1.0.2o_built_linux.tar.gz
 
+echo
+echo "-- git clone robo ... "
+git clone https://github.com/Studio3T/robomongo
+
+echo
+echo "-- cd robomongo"
+cd robomongo
+
 echo 
-echo "ll openssl-1.0.2o"
-ls -l openssl-1.0.2o
-
-# echo
-# echo "git clone robo ... "
-# git clone https://github.com/Studio3T/robomongo
-
-# echo
-# echo "cd robomongo"
-# cd robomongo
-
-# echo 
-# echo "bin/configure"
-# bin/configure 
+echo "-- bin/configure"
+bin/configure 
 
 
 ################################ END #############################################
