@@ -142,6 +142,10 @@ echo "-- tar -xzf openssl-1.0.2o_built_linux.tar.gz"
 tar -xzf openssl-1.0.2o_built_linux.tar.gz
 
 echo
+echo "-- sudo apt install mesa-common-dev"
+sudo apt install mesa-common-dev
+
+echo
 echo "-- git clone robo ... "
 git clone https://github.com/Studio3T/robomongo
 
