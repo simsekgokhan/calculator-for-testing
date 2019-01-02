@@ -48,13 +48,11 @@ ls -l
 
 echo
 echo "-- unzip scons"
-echo "-- cd scons*"
 tar -xzf scons*
-cd scons*
 
 echo
 echo "-- install scons"                  
-sudo python setup.py install > sclogs
+sudo python scons-2.5.1/setup.py install > sclogs
 
 echo
 echo "-- scons -v"                  
