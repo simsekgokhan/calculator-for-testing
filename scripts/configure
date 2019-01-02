@@ -110,14 +110,16 @@ echo
 echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
 echo $ROBOMONGO_CMAKE_PREFIX_PATH                           
 
+# ------- a) Use pre-built robo-shell
 echo 
 echo "mkdir build"
 mkdir build
 
 echo
-echo "-- tar -xzf opt.tar.gz -C build"
-tar -xzf opt.tar.gz -C build
+echo "-- tar -xzf $PROJECT_DIR/opt.tar.gz -C build"
+tar -xzf $PROJECT_DIR/opt.tar.gz -C build
 
+# ------- b) Build robo-shell
 # echo
 # echo "-- pip install"
 # pip install --user -r etc/pip/dev-requirements.txt
