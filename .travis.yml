@@ -13,4 +13,12 @@ script:
   - bash scripts/build
   - bash scripts/run-unit-tests 
 
+deploy:
+  provider: releases
+  api_key: "df91e078d1a9c32cf11ba754a3886642d6b34cd9"
+  file: "bin/calculator-for-testing"
+  skip_cleanup: true
+  on:
+    tags: true
+    
 # end of file
