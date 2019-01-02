@@ -109,7 +109,7 @@ echo
 echo "---- 4) robo"
 cd $PROJECT_DIR
 
-export ROBOMONGO_CMAKE_PREFIX_PATH="$PROJECT_DIR/Qt5.9.3/5.9.3/gcc_64/;$PROJECT_DIR/robomongo-shell;$PROJECT_DIR/Qt_for_CI/openssl-1.0.2o"
+export ROBOMONGO_CMAKE_PREFIX_PATH="$PROJECT_DIR/Qt5.9.3/5.9.3/gcc_64/;$PROJECT_DIR/robomongo-shell;$PROJECT_DIR/openssl-1.0.2o"
 echo
 echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
 echo $ROBOMONGO_CMAKE_PREFIX_PATH      
