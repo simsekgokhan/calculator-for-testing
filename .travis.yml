@@ -15,7 +15,8 @@ script:
 
 deploy:
   provider: releases
-  api_key: "df91e078d1a9c32cf11ba754a3886642d6b34cd9"
+  api_key:
+    secure: MJfXfPwmdHUrOYGsRXuqWiUgGHY5uiVCpxv11kyAAW9wSVU8k09FPOj2gkuiTQAGT5udQgAuz2zTZcch6GI1l2/iQDJjVrJTlwUBKiaSp9WACiAd2XZB4PY9AgyymHLsirK7FcSOzhXMBKh9Sf2fJw4jyl5znJsYXpGKSl7GPwtdapHaxbQM+M1vIMs1xtXDqvVEJwK+/XG+nf2j3N7NycjfSHCpjJniyeuZAJ0+Wq5R+ydE/nU6d3abprFfC0nuLhx0dNBWFNwvMNS5doLC9GowVEqcgd8xHe3FcxzHDmlw1qiLC49Zzgik9SJ/KqIFWmGcD+KoAb9i2K5jR9xpoDwnXYK0AZYbL+/QK2su70QVHM2KAy92nViKfihvKl4C9MaUZZX5hRT5HqECfWl2K4//C/2sGOCGXZ1dguhNj/D8mu23DpEfcofmfYY/6rwS5xRILj8XsDUs2v7utRkpFW16t5A2ce/GwJ6UShIK1hsl12bFkxnsA3Gl+qqtQsJqEuswolNiMrJozWmPqfAhMPZS9EuEJpFLMakt47Tmt2h58Iph7oY0D/z1WhWDsr4cPfA7S3Y2wQF7pzqT7nSsA5AldbrJg+dOAMcmoOw+PzbasJwT/rxBlg1w+vfbMviKiLIrMERMYWcIH8AZPAROblnksUhXDpTqn/jmROHWqu4=
   file: "bin/calculator"
   skip_cleanup: true
 ## Deploy only if the build is a tagged build
