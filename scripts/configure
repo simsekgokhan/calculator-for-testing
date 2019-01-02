@@ -109,37 +109,37 @@ echo
 echo "---- 4) robo"
 cd $PROJECT_DIR
 
-# export ROBOMONGO_CMAKE_PREFIX_PATH="$PROJECT_DIR/Qt5.9.3/5.9.3/gcc_64/;$PROJECT_DIR/robomongo-shell;$PROJECT_DIR/Qt_for_CI/openssl-1.0.2o"
-# echo
-# echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
-# echo $ROBOMONGO_CMAKE_PREFIX_PATH      
+export ROBOMONGO_CMAKE_PREFIX_PATH="$PROJECT_DIR/Qt5.9.3/5.9.3/gcc_64/;$PROJECT_DIR/robomongo-shell;$PROJECT_DIR/Qt_for_CI/openssl-1.0.2o"
+echo
+echo "-- ROBOMONGO_CMAKE_PREFIX_PATH:"
+echo $ROBOMONGO_CMAKE_PREFIX_PATH      
 
-# echo
-# echo "-- a) git clone Qt_for_CI... "
-# git clone https://github.com/simsekgokhan/Qt_for_CI.git
-# echo
-# echo "-- mv Qt_for_CI/* ."
-# mv Qt_for_CI/*.gz .
+echo
+echo "-- a) git clone Qt_for_CI... "
+git clone https://github.com/simsekgokhan/Qt_for_CI.git
+echo
+echo "-- mv Qt_for_CI/* ."
+mv Qt_for_CI/*.gz .
 
-# echo 
-# echo "mkdir -p Qt5.9.3/5.9.3/"
-# mkdir -p Qt5.9.3/5.9.3/
+echo 
+echo "mkdir -p Qt5.9.3/5.9.3/"
+mkdir -p Qt5.9.3/5.9.3/
 
-# echo
-# echo "-- tar -xzf qt_5.9.3_gcc_64.tar.gz "
-# tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/
+echo
+echo "-- tar -xzf qt_5.9.3_gcc_64.tar.gz "
+tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/
 
-# echo 
-# echo "mkdir robomongo-shell"
-# mkdir robomongo-shell
+echo 
+echo "mkdir robomongo-shell"
+mkdir robomongo-shell
 
-# echo
-# echo "-- tar -xzf opt.tar.gz -C robomongo-shell"
-# tar -xzf opt.tar.gz -C robomongo-shell
+echo
+echo "-- tar -xzf opt.tar.gz -C robomongo-shell"
+tar -xzf opt.tar.gz -C robomongo-shell
 
-# echo
-# echo "-- tar -xzf openssl-1.0.2o_built_linux.tar.gz"
-# tar -xzf openssl-1.0.2o_built_linux.tar.gz
+echo
+echo "-- tar -xzf openssl-1.0.2o_built_linux.tar.gz"
+tar -xzf openssl-1.0.2o_built_linux.tar.gz
 
 echo
 echo "sudo apt-get update"
@@ -153,17 +153,17 @@ echo
 echo "-- sudo apt install mesa-common-dev"
 sudo apt install mesa-common-dev
 
-# echo
-# echo "-- git clone robo ... "
-# git clone https://github.com/Studio3T/robomongo
+echo
+echo "-- git clone robo ... "
+git clone https://github.com/Studio3T/robomongo
 
-# echo
-# echo "-- cd robomongo"
-# cd robomongo
+echo
+echo "-- cd robomongo"
+cd robomongo
 
-# echo 
-# echo "-- bin/configure"
-# bin/configure 
+echo 
+echo "-- bin/configure"
+bin/configure 
 
 
 ################################ END #############################################
