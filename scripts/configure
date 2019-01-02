@@ -126,7 +126,7 @@ echo "mkdir -p Qt5.9.3/5.9.3/"
 mkdir -p Qt5.9.3/5.9.3/
 
 echo
-echo "-- tar -xzf qt_5.9.3_gcc_64.tar.gz "
+echo "-- tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/"
 tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/
 
 echo 
@@ -150,10 +150,6 @@ echo "sudo apt-get install libgl-dev"
 sudo apt-get install libgl-dev
 
 echo
-echo "-- sudo apt install mesa-common-dev"
-sudo apt install mesa-common-dev
-
-echo
 echo "-- git clone robo ... "
 git clone https://github.com/Studio3T/robomongo
 
@@ -164,6 +160,10 @@ cd robomongo
 echo 
 echo "-- bin/configure"
 bin/configure 
+
+echo 
+echo "ls -l /home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell"
+ls -l /home/travis/build/gsimsekfb/calculator-for-testing/robomongo-shell
 
 
 ################################ END #############################################
