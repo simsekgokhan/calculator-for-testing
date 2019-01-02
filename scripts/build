@@ -13,5 +13,5 @@ printf " \n--------------- Building Project ---------------\n\n"
 cmake --build $PROJECT_DIR/build
 
 echo
-echo "-- ll build:"
-ls -l build
+echo "-- ll $ PROJECT_DIR/build:"
+ls -l $PROJECT_DIR/build
