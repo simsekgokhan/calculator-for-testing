@@ -8,5 +8,5 @@ Travis CI:
 - Travis CI 
 - Cross platform (win, linux, macos) build 
 - gtest unit tests 
-- C++14 working
+- C++14
 
