@@ -62,18 +62,18 @@ cd $PROJECT_DIR
 
 # ###########################  3. robo-shell ##################################################
 
-# echo
-# echo "---- 3) robo-shell"
-# cd $PROJECT_DIR
-# echo
-# echo "-- pwd"
-# pwd
-# echo
-# echo "-- a) git clone ... "
-# git clone https://github.com/paralect/robomongo-shell.git
-# echo
-# echo "-- ll"
-# ls -l
+echo
+echo "---- 3) robo-shell"
+cd $PROJECT_DIR
+echo
+echo "-- pwd"
+pwd
+echo
+echo "-- a) git clone robo-shell... "
+git clone https://github.com/paralect/robomongo-shell.git
+echo
+echo "-- ll"
+ls -l
 
 # echo
 # echo "-- cd robomongo-shell"
@@ -130,12 +130,12 @@ echo "-- tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/"
 tar -xzf qt_5.9.3_gcc_64.tar.gz -C Qt5.9.3/5.9.3/
 
 echo 
-echo "mkdir robomongo-shell"
-mkdir robomongo-shell
+echo "mkdir -p robomongo-shell/build"
+mkdir -p robomongo-shell/build
 
 echo
-echo "-- tar -xzf opt.tar.gz -C robomongo-shell"
-tar -xzf opt.tar.gz -C robomongo-shell
+echo "-- tar -xzf opt.tar.gz -C robomongo-shell/build"
+tar -xzf opt.tar.gz -C robomongo-shell/build
 
 echo
 echo "-- tar -xzf openssl-1.0.2o_built_linux.tar.gz"
