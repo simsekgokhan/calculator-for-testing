@@ -19,10 +19,14 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 add_subdirectory(src)
 
 # gtest
+# https://google.github.io/googletest/quickstart-cmake.html#set-up-a-project
 include(FetchContent)
 FetchContent_Declare(
   googletest
   URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+  # Note: 03597a01ee50ed33e9dfd640b249b4be3799d395 is the Git commit hash of 
+  # the GoogleTest version to use; recommend updating the hash often to point 
+  # to the latest version.
 )
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
